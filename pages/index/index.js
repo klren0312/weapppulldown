@@ -7,7 +7,8 @@ Page({
     topTop: 0,
     motto: 'Hello World',
     isOpen: false,
-    showCamera: false
+    showCamera: false,
+    pullDowntip: ''
   },
   onLoad() {
     const a = wx.getSystemInfoSync()
@@ -47,11 +48,13 @@ Page({
     }
     if (diffPageY > this.data.windowHeight / 2) {
       this.setData({
+        pullDowntip: '',
         topTop: 0,
         isOpen: true
       })
     } else {
       this.setData({
+        pullDowntip: '继续下拉',
         topTop: -this.data.windowHeight + diffPageY
       })
     }

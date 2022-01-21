@@ -5,7 +5,6 @@
 .top-block {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   position: absolute;
   left: -1000px;
@@ -13,6 +12,23 @@
   height: 100%;
   background: #dfdfdf;
   transition: top .3s ease-in-out;
+}
+
+.top-block::after {
+  content: '';
+  width: 8rpx;
+  height: 250rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: -250rpx;
+  background: #ff0000;
+  border-radius: 0 0 50% 50%;
+}
+
+.pull-down-tip {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
 }
 
 .the-camera {
