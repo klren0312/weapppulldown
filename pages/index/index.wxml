@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view
+  class="container"
+  bindtouchstart="touchStart"
+  bindtouchmove="touchMove"
+  bindtouchend="touchEnd"
+>
+  <view class="top-block" style="top:{{topTop}}px;left: {{renderBlock ? '0' : '-1000px'}};">
+    <camera
+      class="the-camera"
+      wx:if="showCamera"
+      device-position="back"
+      flash="off"
+      resolution="high"
+      style="width: {{windowWidth}}px;height: {{windowWidth}}px;"
+    ></camera>
+    <button bindtap="closeBlock">关闭</button>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

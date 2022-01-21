@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+  height: 100vh;
+}
+.top-block {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  position: absolute;
+  left: -1000px;
+  width: 100%;
+  height: 100%;
+  background: #dfdfdf;
+  transition: top .3s ease-in-out;
+}
+
+.the-camera {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
