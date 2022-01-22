@@ -6,14 +6,16 @@
   bindtouchend="touchEnd"
 >
   <view class="top-block" style="top:{{topTop}}px;left: {{renderBlock ? '0' : '-1000px'}};">
-    <camera
-      class="the-camera"
-      wx:if="showCamera"
-      device-position="back"
-      flash="off"
-      resolution="high"
-      style="width: {{windowWidth}}px;height: {{windowWidth}}px;"
-    ></camera>
+    <view style="width: {{windowWidth}}px;height: {{windowWidth}}px;">
+      <camera
+        wx:if="{{showCamera}}"
+        class="the-camera"
+        device-position="back"
+        flash="off"
+        resolution="high"
+        style="width: {{windowWidth}}px;height: {{windowWidth}}px;"
+      ></camera>
+    </view>
     <button bindtap="closeBlock">关闭</button>
     <view class="pull-down-tip">{{pullDowntip}}</view>
   </view>

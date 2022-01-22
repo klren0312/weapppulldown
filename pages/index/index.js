@@ -26,7 +26,8 @@ Page({
   closeBlock() {
     this.setData({
       isOpen: false,
-      topTop: -this.data.windowHeight
+      topTop: -this.data.windowHeight,
+      showCamera: false
     })
   },
   touchStart(e) {
@@ -50,12 +51,14 @@ Page({
       this.setData({
         pullDowntip: '',
         topTop: 0,
-        isOpen: true
+        isOpen: true,
+        showCamera: true
       })
     } else {
       this.setData({
         pullDowntip: '继续下拉',
-        topTop: -this.data.windowHeight + diffPageY
+        topTop: -this.data.windowHeight + diffPageY,
+        showCamera: false
       })
     }
   },
@@ -68,11 +71,13 @@ Page({
     if (diffPageY > this.data.windowHeight / 1.5) {
       this.setData({
         topTop: 0,
-        isOpen: true
+        isOpen: true,
+        showCamera: true
       })
     } else {
       this.setData({
-        topTop: -this.data.windowHeight
+        topTop: -this.data.windowHeight,
+        showCamera: false
       })
     }
   }
